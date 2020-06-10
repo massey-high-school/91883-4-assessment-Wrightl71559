@@ -4,3 +4,6 @@
 # set up question to ask user
 # return user input
 
+
+# integer checking function
+

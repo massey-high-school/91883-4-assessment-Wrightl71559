@@ -18,11 +18,11 @@ def string_checker(question, to_check):
             elif response == item[0]:
                 return item
 
-        print("sorry that is not a valid response")
+        print("Please enter a or b")
 
 # Main Routine
 
 q_options = ["a", "b"]
 
-q_type = string_checker("for square root questions enter <a> or for squaring questions enter <b>", q_options)
+q_type = string_checker("for square root questions enter <a> or for squaring questions enter <b>  ", q_options)
 print(q_type)
