@@ -20,6 +20,7 @@ def intcheck(question, low, high):
                 print()
        except ValueError:
            print(error)
+           print()
 
 
 # Main Routine
