@@ -40,11 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="02_generate_random.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="02_generate_random.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_generate_random.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="00_sandpit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/00_sandpit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -68,6 +78,7 @@
         <option value="$PROJECT_DIR$/01_getinput.py" />
         <option value="$PROJECT_DIR$/01_getinput_b.py" />
         <option value="$PROJECT_DIR$/02_generate_random.py" />
+        <option value="$PROJECT_DIR$/00_sandpit.py" />
       </list>
     </option>
   </component>
@@ -135,7 +146,7 @@
       <recent name="H:\Documents\COM101\01_Programming\programmingassessment" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.02_generate_random">
+  <component name="RunManager" selected="Python.00_sandpit">
     <configuration default="false" name="01_getinput" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -200,6 +211,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="programmingassessment" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/02_generate_random.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="00_sandpit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="programmingassessment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_sandpit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -338,18 +366,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.01_getinput" />
       <item index="1" class="java.lang.String" itemvalue="Python.01_LU_howmuch" />
       <item index="2" class="java.lang.String" itemvalue="Python.01_getinput_b" />
       <item index="3" class="java.lang.String" itemvalue="Python.02_generate_random" />
+      <item index="4" class="java.lang.String" itemvalue="Python.00_sandpit" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.02_generate_random" />
-        <item index="1" class="java.lang.String" itemvalue="Python.01_getinput_b" />
-        <item index="2" class="java.lang.String" itemvalue="Python.01_getinput" />
-        <item index="3" class="java.lang.String" itemvalue="Python.01_LU_howmuch" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.00_sandpit" />
+        <item index="1" class="java.lang.String" itemvalue="Python.02_generate_random" />
+        <item index="2" class="java.lang.String" itemvalue="Python.01_getinput_b" />
+        <item index="3" class="java.lang.String" itemvalue="Python.01_getinput" />
+        <item index="4" class="java.lang.String" itemvalue="Python.01_LU_howmuch" />
       </list>
     </recent_temporary>
   </component>
@@ -405,6 +435,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/01_getinput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_getinput_b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_generate_random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01_getinput.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -471,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,6 +532,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00_sandpit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
