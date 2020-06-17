@@ -1,18 +1,14 @@
 # component 2
-# create list for both types of question
 # import random
+# generate random number between 1 and 15
 
 # imports random
 import random
 
 # main code
-# number to square
-s_questions = ["3", "6", "9", "12", "10", "7", "11", "15", "5", "8"]
-
-
-# generates random from list
+# generates random between 1 and 15
 for item in range(1, 20):
-    random_1 = random.choice(s_questions)
-    print(random_1, end="\t")
+    answer = random.randint(1,15)
+    print(answer)
 
 

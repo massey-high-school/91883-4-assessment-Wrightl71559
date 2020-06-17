@@ -1,4 +1,5 @@
-numbers = [1, 2, 3, 4, 5, 6, 7]
+import random
 
-for item in numbers:
-    print(item)
+for item in range(1, 21):
+    answer = random.randint(1, 4)
+    print(answer)
