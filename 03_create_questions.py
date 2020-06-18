@@ -41,19 +41,19 @@ def string_checker(question, to_check):
 # Main Routine
 
 q_options = ["a", "b"]
-q_type = string_checker("for square root questions enter <a> or for squaring questions enter <b>  ", q_options)
+q_type = string_checker("For square root questions enter <a> or for squaring questions enter <b>  ", q_options)
 
 q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
 
 q_subject = random.randint(1,15)
 
-for item in q_number:
+for q_number:
     if q_type == "a":
         square_root = q_subject * q_subject
         u_answer = input("What is the square root of {}?  ".format(square_root))
     else:
         u_answer = input("what is {} squared?  ".format(q_subject))
-        
+
 
 
 
