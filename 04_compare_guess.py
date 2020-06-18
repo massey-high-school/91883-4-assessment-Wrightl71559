@@ -1,5 +1,4 @@
-# component 3 - create equations
-# get user input and use it to generate questions
+
 
 # imports random
 import random
