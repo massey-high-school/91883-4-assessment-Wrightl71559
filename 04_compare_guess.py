@@ -1,4 +1,6 @@
-
+# component 4 - compare guess
+# set up program to compare user guess to correct answer using a simple equation
+# give feedback (correct / not correct)
 
 # imports random
 import random
@@ -46,14 +48,17 @@ q_type = string_checker("For square root questions enter <a> or for squaring que
 q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
 
 q_subject = 8
-
+qs_squared = q_subject * q_subject
 
 if q_type == "a":
-    square_root = q_subject * q_subject
-    u_answer = intcheck ("What is the square root of {}?  ".format(square_root), 1, 300)
+
+    u_answer = intcheck ("What is the square root of {}?  ".format(qs_squared), 1, 300)
 else:
     u_answer = intcheck ("what is {} squared?  ".format(q_subject), 1, 300)
 
 
-
-
+if q_type == "a" and u_answer == q_subject:
+    print("That is correct !!")
+elif q_type == "a"and u_answer != q_subject:
+    print("Sorry, that is incorrect. The answer is {}".format(q_subject))
+elif q_type == "b" and u_answer == qs_squared:
