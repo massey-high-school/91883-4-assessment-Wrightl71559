@@ -51,7 +51,6 @@ q_subject = 8
 qs_squared = q_subject * q_subject
 
 if q_type == "a":
-
     u_answer = intcheck ("What is the square root of {}?  ".format(qs_squared), 1, 300)
 else:
     u_answer = intcheck ("what is {} squared?  ".format(q_subject), 1, 300)
@@ -62,3 +61,6 @@ if q_type == "a" and u_answer == q_subject:
 elif q_type == "a"and u_answer != q_subject:
     print("Sorry, that is incorrect. The answer is {}".format(q_subject))
 elif q_type == "b" and u_answer == qs_squared:
+    print("That is correct !!")
+else:
+    print("Sorry, that is incorrect. that answer is {}".format(qs_squared))
