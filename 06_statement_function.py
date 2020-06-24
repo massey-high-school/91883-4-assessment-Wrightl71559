@@ -1,6 +1,5 @@
-# component 5 - loop game
-# loop game amount of times specified by user
-# end game/round when all questions have been asked
+# component 6 - statement generator function
+# implement statement generating function from previous code
 
 # imports random
 import random
@@ -39,6 +38,14 @@ def string_checker(question, to_check):
 
         print("Please enter a or b")
 
+
+# statement generator function
+def rps_statement(statement, char):
+    print()
+    print(char * len(statement))
+    print(statement)
+    print(char * len(statement))
+    print
 
 # Main Routine
 
