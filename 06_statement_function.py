@@ -40,12 +40,12 @@ def string_checker(question, to_check):
 
 
 # statement generator function
-def rps_statement(statement, char):
+def pa_statement(statement, char):
     print()
     print(char * len(statement))
     print(statement)
     print(char * len(statement))
-    print
+    print()
 
 # Main Routine
 
@@ -65,12 +65,12 @@ while qs_asked != q_number:
         u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 300)
 
     if q_type == "a" and u_answer == q_subject:
-        print("That is correct !!")
+        pa_statement("!! That is correct !!", "!")
     elif q_type == "a"and u_answer != q_subject:
-        print("Sorry, that is incorrect. The answer is {}".format(q_subject))
+        pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(q_subject), "=")
     elif q_type == "b" and u_answer == qs_squared:
-        print("That is correct !!")
+        pa_statement("!! That is correct !!", "!")
     else:
-        print("Sorry, that is incorrect. that answer is {}".format(qs_squared))
+        pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(qs_squared), "=")
 
     qs_asked += 1
