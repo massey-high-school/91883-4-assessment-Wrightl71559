@@ -1,5 +1,6 @@
 # component 7 - Game stats
 # generate a game statistics "paragraph" to display at end of game
+# (I am using some code made by Miss Gottschalk)
 
 # To do
 # count correct and incorrect questions
@@ -54,28 +55,51 @@ def pa_statement(statement, char):
 
 # Main Routine
 
-q_options = ["a", "b"]
-q_type = string_checker("For square root questions enter <a> or for squaring questions enter <b>  ", q_options)
+play_again = ""
+while play_again == "":
 
-q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
-qs_asked = 0
+    game_stats = []
 
-while qs_asked != q_number:
-    q_subject = 8
-    qs_squared = q_subject * q_subject
+    q_options = ["a", "b"]
+    q_type = string_checker("For square root questions enter <a> or for squaring questions enter <b>  ", q_options)
 
-    if q_type == "a":
-        u_answer = intcheck("What is the square root of {}?  ".format(qs_squared), 1, 300)
-    else:
-        u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 300)
+    q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
+    qs_asked = 0
 
-    if q_type == "a" and u_answer == q_subject:
-        pa_statement("!! That is correct !!", "!")
-    elif q_type == "a"and u_answer != q_subject:
-        pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(q_subject), "=")
-    elif q_type == "b" and u_answer == qs_squared:
-        pa_statement("!! That is correct !!", "!")
-    else:
-        pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(qs_squared), "=")
+    while qs_asked != q_number:
+        q_subject = 8
+        qs_squared = q_subject * q_subject
 
-    qs_asked += 1
+        if q_type == "a":
+            u_answer = intcheck("What is the square root of {}?  ".format(qs_squared), 1, 300)
+        else:
+            u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 300)
+
+        if q_type == "a" and u_answer == q_subject:
+            pa_statement("!! That is correct !!", "!")
+            feedback = "Correct"
+        elif q_type == "a"and u_answer != q_subject:
+            pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(q_subject), "=")
+            feedback = "Incorrect"
+        elif q_type == "b" and u_answer == qs_squared:
+            pa_statement("!! That is correct !!", "!")
+            feedback = "Correct"
+        else:
+            pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(qs_squared), "=")
+            feedback = "Incorrect"
+
+        qs_asked += 1
+        q_result = "Question {}: {}".format(qs_asked, feedback)
+        game_stats.append(q_result)
+
+    print()
+    print("## Game Statistics ##")
+
+    for item in game_stats:
+        print(item)
+
+    print()
+    play_again = input("Press <enter> to play again or any key to quit  ")
+
+print()
+print("Thank you for playing :)")
