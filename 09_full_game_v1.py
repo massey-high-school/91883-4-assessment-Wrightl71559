@@ -48,9 +48,23 @@ def pa_statement(statement, char):
     print()
 
 # Main Routine
+pa_statement("** Maths Quiz **", "*")
 
 play_again = ""
 while play_again == "":
+
+    y_n = ["yes", "no"]
+    game_intro = string_checker("Have you played this game before? (yes or no)  ", y_n)
+
+    if game_intro == "no":
+        print()
+        print("This maths quiz is about squaring and square rooting.")
+        print("You will be asked which type of questions you’d like and how many you want. ")
+        print("Try your best to figure out the correct answer. ")
+        print("If you are incorrect the correct answer will be shown to you.")
+        print("Your game statistics will be shown at the end of the game.")
+        print("Good Luck!")
+        print()
 
     game_stats = []
 
