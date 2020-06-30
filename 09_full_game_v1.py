@@ -1,5 +1,5 @@
 # Full game
-# put together all components and make sure it works as expected
+# put together all components and make sure it works as expected (debug accordingly)
 
 # imports random
 import random
