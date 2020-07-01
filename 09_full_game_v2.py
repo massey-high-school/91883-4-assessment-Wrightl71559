@@ -24,11 +24,13 @@ def intcheck(question, low, high):
 
 
 # string checking function (made by Miss Gottschalk)
-def string_checker(question, to_check):
+def string_checker(question, to_check, error):
     valid = False
     while not valid:
 
+        print()
         response = input(question).lower()
+        print()
 
         for item in to_check:
             if response == item:
@@ -36,7 +38,7 @@ def string_checker(question, to_check):
             elif response == item[0]:
                 return item
 
-        print("Please enter a or b")
+        print(error)
 
 
 # statement generator function
@@ -48,29 +50,29 @@ def pa_statement(statement, char):
     print()
 
 # Main Routine
-pa_statement("** Maths Quiz **", "*")
+pa_statement("** Squares & Square Roots **", "*")
+
+y_n = ["yes", "no"]
+game_intro = string_checker("Have you played this game before? (yes or no)  ", y_n, "Please enter yes or no")
+
+if game_intro == "no":
+    print()
+    print("This maths quiz is about squaring and square rooting.")
+    print("- You will be asked which type of questions you’d like and how many you want. ")
+    print("- Try your best to figure out the correct answer. ")
+    print("- If you are incorrect the correct answer will be shown to you.")
+    print("- Your game statistics will be shown at the end of the game.")
+    print("Good Luck!")
+    print()
 
 play_again = ""
 while play_again == "":
-
-    y_n = ["yes", "no"]
-    game_intro = string_checker("Have you played this game before? (yes or no)  ", y_n)
-
-    if game_intro == "no":
-        print()
-        print("This maths quiz is about squaring and square rooting.")
-        print("You will be asked which type of questions you’d like and how many you want. ")
-        print("Try your best to figure out the correct answer. ")
-        print("If you are incorrect the correct answer will be shown to you.")
-        print("Your game statistics will be shown at the end of the game.")
-        print("Good Luck!")
-        print()
 
     game_stats = []
 
     q_options = ["root", "square"]
     q_type = string_checker("For square root questions enter <r or root> or for squaring questions"
-                            " enter <s or square>  ", q_options)
+                            " enter <s or square>  ", q_options, "Please enter square or root")
 
     q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
     qs_asked = 0
