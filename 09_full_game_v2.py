@@ -6,7 +6,7 @@ import random
 
 
 # integer checking function
-def intcheck(question, low, high):
+def intcheck(question, low, high, error_2):
     valid = False
     error = "Please enter an integer"
     while not valid:
@@ -16,9 +16,11 @@ def intcheck(question, low, high):
             if low <= response <= high:
                 return response
             else:
-                print("That integer is either too low or too high")
+                print()
+                print(error_2)
                 print()
        except ValueError:
+           print()
            print(error)
            print()
 
@@ -74,17 +76,20 @@ while play_again == "":
     q_type = string_checker("For square root questions enter <r or root> or for squaring questions"
                             " enter <s or square>  ", q_options, "Please enter square or root")
 
-    q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10)
+    q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10,
+                        "Please enter an integer between 1 and 10")
     qs_asked = 0
-
+    print()
     while qs_asked != q_number:
         q_subject = random.randint(1, 15)
         qs_squared = q_subject * q_subject
 
         if q_type == "root":
-            u_answer = intcheck("What is the square root of {}?  ".format(qs_squared), 1, 300)
+            u_answer = intcheck("What is the square root of {}?  ".format(qs_squared), 1, 500,
+                                "Please enter an integer greater than zero")
         else:
-            u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 300)
+            u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 500,
+                                "Please enter an integer greater than zero")
 
         if q_type == "root" and u_answer == q_subject:
             pa_statement("!! That is correct !!", "!")
