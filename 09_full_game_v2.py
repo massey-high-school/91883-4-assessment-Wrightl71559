@@ -52,8 +52,10 @@ def pa_statement(statement, char):
     print()
 
 # Main Routine
+# quiz title
 pa_statement("** Squares & Square Roots **", "*")
 
+# intro - if user has played before instructions aren't given and vice versa
 y_n = ["yes", "no"]
 game_intro = string_checker("Have you played this game before? (yes or no)  ", y_n, "Please enter yes or no")
 
@@ -67,30 +69,37 @@ if game_intro == "no":
     print("Good Luck!")
     print()
 
+# loops entire game
 play_again = ""
 while play_again == "":
 
     game_stats = []
+    correct_answers = 0
 
+    # get input - what type of question and how many
     q_options = ["root", "square"]
     q_type = string_checker("For square root questions enter <r or root> or for squaring questions"
                             " enter <s or square>  ", q_options, "Please enter square or root")
 
     q_number = intcheck("How many questions would you like? (up to 10)  ", 1, 10,
                         "Please enter an integer between 1 and 10")
+    # loops game to provide amount of questions specified by user
     qs_asked = 0
     print()
     while qs_asked != q_number:
+        # generates random for squaring questions and number for square root questions
         q_subject = random.randint(1, 15)
         qs_squared = q_subject * q_subject
 
+        # generates question based on user input
         if q_type == "root":
-            u_answer = intcheck("What is the square root of {}?  ".format(qs_squared), 1, 500,
-                                "Please enter an integer greater than zero")
+            u_question = "What is the square root of {}?  ".format(qs_squared)
+            u_answer = intcheck("{}".format(u_question), 1, 10000, "Please enter an integer greater than zero")
         else:
-            u_answer = intcheck("what is {} squared?  ".format(q_subject), 1, 500,
-                                "Please enter an integer greater than zero")
+            u_question = "what is {} squared?  ".format(q_subject)
+            u_answer = intcheck("{}".format(u_question), 1, 10000, "Please enter an integer greater than zero")
 
+        # compares user answer to correct answer
         if q_type == "root" and u_answer == q_subject:
             pa_statement("!! That is correct !!", "!")
             feedback = "Correct"
@@ -104,16 +113,23 @@ while play_again == "":
             pa_statement("== Sorry, that is incorrect. The answer is {} ==".format(qs_squared), "=")
             feedback = "Incorrect"
 
+        # counts questions asked
         qs_asked += 1
-        q_result = "Question {}: {}".format(qs_asked, feedback)
+        # records questions and results for game stats
+        q_result = "Q{} - {}Your answer: {}  > {} <".format(qs_asked, u_question, u_answer, feedback)
         game_stats.append(q_result)
+        if feedback == "Correct":
+            correct_answers += 1
 
+    # displays game stats - question, users answer, correct or incorrect
     print()
     print("## Game Statistics ##")
 
     for item in game_stats:
         print(item)
+    print("You answered {}/{} questions correct".format(correct_answers, q_number))
 
+# end game mechanics
     print()
     play_again = input("Press <enter> to play again or any key to quit  ")
 
